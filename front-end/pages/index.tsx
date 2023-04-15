@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Layout from '@/components/layout';
 import { useEffect, useState } from 'react';
+import Layout from '@/components/layout';
 import Header from '@/components/Header';
 import Main from '@/components/Main';
 
@@ -9,13 +9,8 @@ export default function Home() {
 
     useEffect(() => {
         let userPrefersDark = window.matchMedia('(prefers-color-scheme:dark)').matches;
-        if (userPrefersDark) {
-            document.body.className = 'dark';
-            setCurrentTheme('Dark');
-        } else {
-            document.body.className = 'light';
-            setCurrentTheme('Light');
-        }
+        document.body.className = userPrefersDark ? 'dark' : 'light';
+        setCurrentTheme(userPrefersDark ? 'Dark' : 'Light');
     }, []);
 
     return (
