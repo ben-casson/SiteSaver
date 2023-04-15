@@ -1,14 +1,21 @@
 import Head from 'next/head';
-import styles from '@/styles/Home.module.scss';
 import Layout from '@/components/layout';
-import { ThemeButton } from '@/components/theme-button';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import Header from '@/components/Header';
+import Main from '@/components/Main';
 
 export default function Home() {
+    const [currentTheme, setCurrentTheme] = useState('');
+
     useEffect(() => {
         let userPrefersDark = window.matchMedia('(prefers-color-scheme:dark)').matches;
-        userPrefersDark ? (document.body.className = 'dark') : (document.body.className = 'light');
-        console.log(userPrefersDark)
+        if (userPrefersDark) {
+            document.body.className = 'dark';
+            setCurrentTheme('Dark');
+        } else {
+            document.body.className = 'light';
+            setCurrentTheme('Light');
+        }
     }, []);
 
     return (
@@ -19,10 +26,8 @@ export default function Home() {
                 <meta name='viewport' content='width=device-width, initial-scale=1' />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <main className={styles.main}>
-                <p>hello</p>
-                <ThemeButton />
-            </main>
+            <Header />
+            <Main currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />
         </Layout>
     );
 }
