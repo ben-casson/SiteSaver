@@ -1,5 +1,5 @@
-import { Dispatch, SetStateAction } from 'react';
 import styles from './MenuItem.module.scss';
+import { Dispatch, SetStateAction } from 'react';
 
 type MenuItemProps = {
     name: string;

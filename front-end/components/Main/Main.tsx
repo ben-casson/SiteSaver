@@ -1,6 +1,6 @@
 import styles from './Main.module.scss';
 import { Dispatch, SetStateAction } from 'react';
-import { Menu } from './Menu';
+import { Menu } from '../Menu/Menu';
 
 type Props = {
     currentTheme: string;

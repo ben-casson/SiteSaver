@@ -1,5 +1,5 @@
-import { MouseEventHandler } from 'react';
 import styles from './MenuButton.module.scss';
+import { MouseEventHandler } from 'react';
 
 type Props = {
     menuIsOpen: boolean;
