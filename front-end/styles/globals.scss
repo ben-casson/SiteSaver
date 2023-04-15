@@ -1,52 +1,95 @@
-$color-black: #000;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
-$color-blue-1: #ADD2FF;
-$color-blue-2: #609FED;
-$color-blue-3: #3E89E5;
-$color-blue-4: #24A0ED;
-$color-blue-5: #00204A;
+:root {
+    --color-black: #000;
 
-$color-gray-1: #EAF3FF;
-$color-gray-2: #CDD9E5;
-$color-gray-3: #B7CDE7;
-$color-gray-4: #8FAAC6;
-$color-gray-5: #7F94AA;
-$color-gray-6: #537393;
-$color-gray-7: #354C62;
-$color-gray-8: #56616B;
-$color-gray-9: #2D333B;
-$color-gray-10: #22272E;
-$color-gray-11: #1B2026;
+    --color-blue-1: #add2ff;
+    --color-blue-2: #609fed;
+    --color-blue-3: #3e89e5;
+    --color-blue-4: #24a0ed;
+    --color-blue-5: #00204a;
 
-$color-green-1: #E6FCEB;
-$color-green-2: #8FE994;
-$color-green-3: #2FB236;
-$color-green-4: #263B34;
-$color-green-5: #222D2C;
-$color-green-6: #111715;
+    --color-gray-1: #eaf3ff;
+    --color-gray-2: #cdd9e5;
+    --color-gray-3: #cddcef;
+    --color-gray-4: #8faac6;
+    --color-gray-5: #7f94aa;
+    --color-gray-6: #537393;
+    --color-gray-7: #354c62;
+    --color-gray-8: #56616b;
+    --color-gray-9: #2d333b;
+    --color-gray-10: #22272e;
+    --color-gray-11: #1b2026;
 
-$color-red: #FF5050;
+    --color-green-1: #e6fceb;
+    --color-green-2: #8fe994;
+    --color-green-3: #2fb236;
+    --color-green-4: #263b34;
+    --color-green-5: #222d2c;
+    --color-green-6: #111715;
 
-$color-white: #fff;
+    --color-red: #ff5050;
 
-$background: $color-white;
-$tag-text: $color-green-3;
+    --color-white: #fff;
+
+    --radius-1: 0.6em;
+    --radius-2: 0.37em;
+    --radius-3: 0.2em;
+
+    // --font-primary: 'Poppins';
+}
 
 @mixin light-mode {
-    background-color: $background;
+    --button-bg: var(--color-white);
+    --button-hover-bg: #effaff;
+    --header-bg: var(--color-white);
+    --shadow: 0px 2px 4px 0px var(--color-gray-3);
+    --site-bg: var(--color-white);
+    --tag-active: var(--color-white);
+    --tag-inactive: var(--color-green-1);
+    --tag-text: var(--color-green-3);
+    --text-primary: var(--color-gray-6);
+    --text-hover: var(--color-gray-7);
+    background-color: var(--site-bg);
 }
 @mixin dark-mode {
-    $background: $color-black;
-    $tag-text: $color-green-2;
-    background-color: $background;
+    --button-bg: var(--color-gray-11);
+    --button-hover-bg: var(--color-gray-9);
+    --header-bg: var(--color-black);
+    --shadow: none;
+    --site-bg: var(--color-black);
+    --tag-active: var(--color-green-2);
+    --tag-inactive: var(--color-green-6);
+    --tag-text: var(--color-green-2);
+    --text-primary: var(--color-gray-2);
+    --text-hover: var(--color-white);
+    background-color: var(--site-bg);
 }
 
-// @media (prefers-color-scheme: light) {
-//         @include light-mode;
-// }
-// @media (prefers-color-scheme: dark) {
-//         @include dark-mode;
-// }
+@mixin flat-dark-mode {
+    --button-bg: var(--color-gray-9);
+    --button-hover-bg: var(--color-gray-8);
+    --header-bg: var(--color-gray-9);
+    --shadow: 0em 0.1em 0.3em 0em var(--color-gray-11);
+    --site-bg: var(--color-gray-10);
+    --tag-active: var(--color-green-4);
+    --tag-inactive: var(--color-green-5);
+    --tag-text: var(--color-green-2);
+    --text-primary: var(--color-gray-2);
+    --text-hover: var(--color-white);
+    background-color: var(--site-bg);
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        @include light-mode;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        @include dark-mode;
+    }
+}
 
 body.light {
     @include light-mode;
@@ -54,22 +97,29 @@ body.light {
 body.dark {
     @include dark-mode;
 }
-// body.flat-dark {
-// }
+body.flat-dark {
+    @include flat-dark-mode;
+}
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-size: 16px;
 }
 
 html,
 body {
     max-width: 1vw;
     overflow-x: hidden;
+    font-family: 'Poppins';
 }
 
 a {
     color: inherit;
     text-decoration: none;
+}
+
+button {
+    border: none;
 }
