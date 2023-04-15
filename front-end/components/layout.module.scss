@@ -1,4 +1,8 @@
 .layout {
     position: fixed;
+    display: flex;
+    flex-direction: column;
     width: 100dvw;
+    height: 100dvh;
+    padding: 20px;
 }
