@@ -1,22 +1,19 @@
 import styles from './MenuItem.module.scss';
-import { Dispatch, SetStateAction } from 'react';
 
 type MenuItemProps = {
     name: string;
-    theme?: string;
-    setCurrentTheme: Dispatch<SetStateAction<string>>;
+    prop?: string;
+    handleClick: any;
 };
 
-export function MenuItem({ name, theme, setCurrentTheme }: MenuItemProps) {
-    const toggleTheme = (event: any) => {
-        const dataTheme = event.target.getAttribute('data-theme');
-        document.body.className = dataTheme;
-        setCurrentTheme(name);
-    };
-
+export function MenuItem({ name, prop, handleClick }: MenuItemProps) {
     return (
         <div className={styles.menuItemContainer} role='menuitem' tabIndex={-1}>
-            <button className={styles.themeButton} onClick={toggleTheme} data-theme={theme}>
+            <button
+                className={styles.themeButton}
+                onClick={() => handleClick(name, prop)}
+                data-prop={prop}
+            >
                 {name}
             </button>
         </div>
