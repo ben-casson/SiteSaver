@@ -5,6 +5,7 @@ import Header from '@/components/Header/Header';
 import Main from '@/components/Main/Main';
 
 export default function Home() {
+    // Use zustand to create global state for theme
     const [currentTheme, setCurrentTheme] = useState('');
 
     useEffect(() => {
@@ -21,7 +22,7 @@ export default function Home() {
                 <meta name='viewport' content='width=device-width, initial-scale=1' />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <Header />
+            <Header currentTheme={currentTheme} />
             <Main currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />
         </Layout>
     );
