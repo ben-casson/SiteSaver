@@ -29,10 +29,10 @@
         border-color: var(--text-primary);
         border-style: solid;
         border-width: 0 0.15em 0.15em 0;
-        top: 2.05em;
+        top: 2.2em;
         left: 4.3em;
-        height: 0.65em;
-        width: 0.65em;
+        height: 0.55em;
+        width: 0.55em;
         transform: rotate(45deg);
         margin-left: 16px;
         text-align: right;
@@ -53,7 +53,7 @@
     }
     .rotate {
         transform: rotate(225deg);
-        translate: 0 0.33em;
+        translate: 0 0.26em;
         border-color: var(--text-hover);
     }
 }
