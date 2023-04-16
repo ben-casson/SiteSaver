@@ -2,15 +2,16 @@ import styles from './MenuButton.module.scss';
 import { MouseEventHandler } from 'react';
 
 type Props = {
+    label: string;
     menuIsOpen: boolean;
     toggleMenu: MouseEventHandler<HTMLButtonElement>;
-    currentTheme: string;
+    selectedOption: string;
 };
 
-export function MenuButton({ menuIsOpen, toggleMenu, currentTheme }: Props) {
+export function MenuButton({ label, menuIsOpen, toggleMenu, selectedOption }: Props) {
     return (
         <div className={styles.menuButtonContainer}>
-            <label htmlFor='menuButton'>Theme</label>
+            <label htmlFor='menuButton'>{label}</label>
             <button
                 name='menuButton'
                 id='menuButton'
@@ -21,7 +22,7 @@ export function MenuButton({ menuIsOpen, toggleMenu, currentTheme }: Props) {
                 aria-controls='menu-items'
                 data-menu-is-open={menuIsOpen}
             >
-                {currentTheme}
+                {selectedOption}
             </button>
             <span className={styles.arrow + ' ' + (menuIsOpen ? styles.rotate : '')}></span>
         </div>
