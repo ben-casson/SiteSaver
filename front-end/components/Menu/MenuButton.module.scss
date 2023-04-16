@@ -10,7 +10,7 @@
     }
 
     .menuButton {
-        width: 110px;
+        width: 108px;
         height: 32px;
         color: var(--text-primary);
         background-color: var(--button-bg);
@@ -23,6 +23,19 @@
         padding: 0px 12px;
         cursor: pointer;
     }
+
+    .menuButton:hover {
+        background-color: var(--button-hover-bg);
+        color: var(--text-hover);
+        box-shadow: none;
+    }
+
+    .menuButton[data-menu-is-open='true'] {
+        background-color: var(--button-hover-bg);
+        color: var(--text-hover);
+        box-shadow: none;
+    }
+    
     .arrow {
         content: '';
         position: absolute;
@@ -40,17 +53,6 @@
         pointer-events: none;
     }
 
-    .menuButton:hover {
-        background-color: var(--button-hover-bg);
-        color: var(--text-hover);
-        box-shadow: none;
-    }
-
-    .menuButton[data-menu-is-open='true'] {
-        background-color: var(--button-hover-bg);
-        color: var(--text-hover);
-        box-shadow: none;
-    }
     .rotate {
         transform: rotate(225deg);
         translate: 0 0.26em;
