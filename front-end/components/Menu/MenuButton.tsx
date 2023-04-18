@@ -24,7 +24,7 @@ export function MenuButton({ label, menuIsOpen, toggleMenu, selectedOption }: Pr
             >
                 {selectedOption}
             </button>
-            <span className={styles.arrow + ' ' + (menuIsOpen ? styles.rotate : '')}></span>
+            <span className={styles.arrow + ' ' + (menuIsOpen ? styles.animate : '')}></span>
         </div>
     );
 }
