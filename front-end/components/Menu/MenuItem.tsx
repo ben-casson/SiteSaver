@@ -2,7 +2,7 @@ import styles from './MenuItem.module.scss';
 
 type MenuItemProps = {
     name: string;
-    prop?: string;
+    prop: string;
     handleClick: any;
 };
 
