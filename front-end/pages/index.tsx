@@ -3,16 +3,16 @@ import { useEffect, useState } from 'react';
 import Layout from '@/components/layout/layout';
 import Header from '@/components/Header/Header';
 import Main from '@/components/Main/Main';
+import useThemeStore from '@/lib/themeStore';
 
 export default function Home() {
-    // Use zustand to create global state for theme
-    const [currentTheme, setCurrentTheme] = useState('');
-
     useEffect(() => {
         let userPrefersDark = window.matchMedia('(prefers-color-scheme:dark)').matches;
         document.body.className = userPrefersDark ? 'dark' : 'light';
-        setCurrentTheme(userPrefersDark ? 'Dark' : 'Light');
-    }, []);
+        userPrefersDark
+            ? useThemeStore.setState({ theme: 'Dark' })
+            : useThemeStore.setState({ theme: 'Light' });
+    });
 
     return (
         <Layout>
@@ -22,8 +22,8 @@ export default function Home() {
                 <meta name='viewport' content='width=device-width, initial-scale=1' />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <Header currentTheme={currentTheme} />
-            <Main currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />
+            <Header />
+            <Main />
         </Layout>
     );
 }
