@@ -14,7 +14,7 @@
         height: 32px;
         color: var(--text-primary);
         background-color: var(--button-bg);
-        box-shadow: var(--shadow);
+        // box-shadow: var(--shadow);
         border-radius: var(--radius-2);
         text-align: left;
         font-family: var(--font-primary);
@@ -25,17 +25,18 @@
     }
 
     .menuButton:hover {
-        background-color: var(--button-hover-bg);
         color: var(--text-hover);
-        box-shadow: none;
+        background-color: var(--button-hover-bg);
+        // box-shadow: none;
     }
 
     .menuButton[data-menu-is-open='true'] {
-        background-color: var(--button-hover-bg);
         color: var(--text-hover);
+        background-color: var(--button-hover-bg);
+        // font-size: 0.86rem;
         box-shadow: none;
     }
-    
+
     .arrow {
         content: '';
         position: absolute;
@@ -49,13 +50,17 @@
         transform: rotate(45deg);
         margin-left: 16px;
         text-align: right;
-        transition: transform 200ms, translate 200ms;
+        transition: transform 150ms, translate 150ms, width 0ms, height 0ms;
         pointer-events: none;
     }
 
-    .rotate {
-        transform: rotate(225deg);
+    .animate {
+        // top: 2.2em;
+        // left: 4.3em;
+        // width: 0.52em;
+        // height: 0.52em;
         translate: 0 0.26em;
+        transform: rotate(225deg);
         border-color: var(--text-hover);
     }
 }
