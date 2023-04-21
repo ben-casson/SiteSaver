@@ -53,6 +53,7 @@
     --tag-text: var(--color-green-3);
     --text-primary: var(--color-gray-6);
     --text-hover: var(--color-gray-6);
+    --text-logo: var(--color-blue-2);
     background-color: var(--site-bg);
 }
 @mixin dark-mode {
@@ -67,6 +68,7 @@
     --tag-text: var(--color-green-2);
     --text-primary: var(--color-gray-2);
     --text-hover: var(--color-white);
+    --text-logo: var(--color-gray-2);
     background-color: var(--site-bg);
 }
 
@@ -82,6 +84,7 @@
     --tag-text: var(--color-green-2);
     --text-primary: var(--color-gray-2);
     --text-hover: var(--color-gray-1);
+    --text-logo: var(--color-gray-2);
     background-color: var(--site-bg);
 }
 
@@ -111,10 +114,10 @@ body.flat-dark {
     padding: 0;
     margin: 0;
     font-size: 16px;
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
 }
 
 html,

@@ -7,15 +7,40 @@
     box-shadow: var(--header-shadow);
 
     .container {
-        position: relative;
         width: 100dvw;
         max-width: 2000px;
-    }
 
-    .logo {
-        position: absolute;
-        top: -12px;
-        width: 60px;
-        height: 60px;
+        .logoContainer {
+            display: flex;
+
+            .iconContainer {
+                position: relative;
+
+                .iconText {
+                    position: absolute;
+                    top: -4px;
+                    margin-left: 14px;
+                    color: var(--site-bg);
+                    font-size: 34px;
+                    font-weight: bold;
+                    z-index: 2;
+                }
+    
+                .icon {
+                    position: absolute;
+                    top: -12px;
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+            .logoText {
+                margin-top: 11px;
+                margin-left: 44px;
+                color: var(--text-logo);
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
     }
 }

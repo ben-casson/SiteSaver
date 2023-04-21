@@ -10,13 +10,19 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.container}>
-                <Image
-                    src={theme === 'Light' ? lightModeIcon : darkModeIcon}
-                    alt='bookmark icon'
-                    className={styles.logo}
-                    width={60}
-                    height={60}
-                />
+                <div className={styles.logoContainer}>
+                    <div className={styles.iconContainer}>
+                        <p className={styles.iconText}>S</p>
+                        <Image
+                            src={theme === 'Light' ? lightModeIcon : darkModeIcon}
+                            alt='bookmark icon'
+                            className={styles.icon}
+                            width={60}
+                            height={60}
+                        />
+                    </div>
+                    <p className={styles.logoText}>iteSaver</p>
+                </div>
             </div>
         </header>
     );
