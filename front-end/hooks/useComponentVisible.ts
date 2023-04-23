@@ -21,3 +21,9 @@ export default function useComponentVisible(
 
     return { ref, isComponentVisible, setIsComponentVisible, toggleMenu };
 }
+
+export function setMenuAttributes(event: any) {
+    let isExpanded = event.target.getAttribute('aria-expanded') === 'true';
+        event.target.setAttribute('aria-expanded', !isExpanded);
+        event.target.setAttribute('data-menu-is-open', !isExpanded);
+}
