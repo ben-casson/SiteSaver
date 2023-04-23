@@ -1,4 +1,4 @@
-import styles from '@/styles/settings.module.scss';
+import styles from '../styles/settings.module.scss';
 import Head from 'next/head';
 import Layout from '@/components/layout/layout';
 import ThemeSelector from '@/components/ThemeSelector/ThemeSelector';
