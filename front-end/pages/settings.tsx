@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Layout from '@/components/layout/layout';
 import ThemeSelector from '@/components/ThemeSelector/ThemeSelector';
 import Header from '@/components/Header/Header';
+import Main from '@/components/Main/Main';
 
 export default function Settings() {
     return (
@@ -14,8 +15,11 @@ export default function Settings() {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
             <Header />
-            <h1 className={styles.heading}>Settings</h1>
-            <ThemeSelector />
+            <Main>
+                <h1 className={styles.heading}>Settings</h1>
+                <ThemeSelector />
+            </Main>
+            
         </Layout>
     );
 }
