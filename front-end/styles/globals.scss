@@ -16,13 +16,13 @@
     --color-gray-5: #7f94aa;
     --color-gray-6: #537393;
     --color-gray-7: #354c62;
-    --color-gray-8: #444C58;
+    --color-gray-8: #444c58;
     --color-gray-9: #2d333b;
     --color-gray-10: #22272e;
     --color-gray-11: #1b2026;
     // F8FBFF, f5f8fc
-    --color-gray-12: #F0F6FD;
-    --color-gray-13: #E3ECF9;
+    --color-gray-12: #f0f6fd;
+    --color-gray-13: #e3ecf9;
 
     --color-green-1: #e6fceb;
     --color-green-2: #8fe994;
@@ -44,6 +44,7 @@
     --button-bg: var(--color-gray-12);
     // #effaff
     --button-hover-bg: var(--color-gray-13);
+    --hamburger-button: var(--color-gray-4);
     --header-bg: var(--color-white);
     --header-shadow: 0em 0.1em 0.5em 0em var(--color-gray-3);
     --shadow: 0px 2px 4px 0px var(--color-gray-3);
@@ -59,6 +60,7 @@
 @mixin dark-mode {
     --button-bg: var(--color-gray-11);
     --button-hover-bg: var(--color-gray-9);
+    --hamburger-button: var(--color-gray-5);
     --header-bg: var(--color-black);
     --header-shadow: 0em -0.1em 0.1em 0.1em var(--color-gray-11);
     --shadow: none;
@@ -75,6 +77,7 @@
 @mixin flat-dark-mode {
     --button-bg: var(--color-gray-9);
     --button-hover-bg: var(--color-gray-8);
+    --hamburger-button: var(--color-gray-5);
     --header-bg: var(--color-gray-9);
     --header-shadow: 0em 0.1em 0.3em 0em var(--color-gray-11);
     --shadow: 0em 0.1em 0.3em 0em var(--color-gray-11);
@@ -114,10 +117,10 @@ body.flat-dark {
     padding: 0;
     margin: 0;
     font-size: 16px;
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: all .1s ease-in;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
 }
 
 html,
