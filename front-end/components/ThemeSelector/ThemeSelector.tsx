@@ -5,7 +5,8 @@ import useThemeStore from '@/lib/themeStore';
 export default function ThemeSelector() {
     const theme = useThemeStore((state) => state.theme);
 
-    const toggleTheme = (name: string, prop?: string) => {
+    const toggleTheme = (event: any, name: string, prop?: string) => {
+        event.preventDefault();
         if (prop) document.body.className = prop;
         useThemeStore.setState({ theme: name });
     };
