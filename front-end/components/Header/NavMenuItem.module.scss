@@ -1,0 +1,23 @@
+.navMenuItem {
+    list-style: none;
+
+    button {
+        background-color: transparent;
+
+        .link {
+            font-size: 40px;
+            color: var(--text-primary);
+        }
+        @media (min-width: 800px) {
+            .link {
+                font-size: 16px;
+            }
+        }
+    }
+
+    button:hover {
+        .link {
+            color: var(--text-hover);
+        }
+    }
+}
