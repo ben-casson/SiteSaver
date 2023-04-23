@@ -1,6 +1,6 @@
 import styles from './Menu.module.scss';
 import { MenuButton } from './MenuButton';
-import useComponentVisible from '@/hooks/useComponentVisible';
+import useComponentVisible, { setMenuAttributes } from '@/hooks/useComponentVisible';
 
 type Props = {
     children: any;
@@ -15,10 +15,9 @@ export function Menu({ children, label, selectedOption }: Props) {
     );
 
     function toggleMenu(event: any) {
+        event.preventDefault();
         setIsComponentVisible(!isComponentVisible);
-        let isExpanded = event.target.getAttribute('aria-expanded') === 'true';
-        event.target.setAttribute('aria-expanded', !isExpanded);
-        event.target.setAttribute('data-menu-is-open', !isExpanded);
+        setMenuAttributes(event);
     }
 
     return (
