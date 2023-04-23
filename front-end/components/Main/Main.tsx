@@ -1,10 +1,14 @@
 import styles from './Main.module.scss';
-import ThemeSelector from '../ThemeSelector/ThemeSelector';
+// import ThemeSelector from '../ThemeSelector/ThemeSelector';
 
-export default function Main() {
+type Props = {
+    children: any;
+}
+
+export default function Main({ children }: Props) {
     return (
         <main className={styles.main}>
-            <ThemeSelector />
+            {children}
         </main>
     );
 }
