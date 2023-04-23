@@ -3,9 +3,8 @@ import Image from 'next/image';
 import darkModeIcon from '../../public/bookmark-dark-mode.png';
 import lightModeIcon from '../../public/bookmark-light-mode.png';
 import useThemeStore from '@/lib/themeStore';
-import useComponentVisible from '@/hooks/useComponentVisible';
-import MobileMenu from './MobileMenu';
-
+import NavMenuItem from './NavMenuItem';
+import MobileNavMenu from './MobileNavMenu';
 
 export default function Header() {
     const theme = useThemeStore((state) => state.theme);
@@ -26,7 +25,11 @@ export default function Header() {
                     </div>
                     <p className={styles.logoText}>iteSaver</p>
                 </div>
-                <MobileMenu />
+                <ul className={styles.navMenuItems}>
+                    <NavMenuItem text='Bookmarks' path='/' />
+                    <NavMenuItem text='Settings' path='/settings' />
+                </ul>
+                <MobileNavMenu />
             </div>
         </header>
     );
