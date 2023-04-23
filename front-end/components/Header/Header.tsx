@@ -21,6 +21,7 @@ export default function Header() {
                             className={styles.icon}
                             width={60}
                             height={60}
+                            priority
                         />
                     </div>
                     <p className={styles.logoText}>iteSaver</p>
