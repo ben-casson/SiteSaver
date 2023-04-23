@@ -26,8 +26,10 @@ export default function Home() {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
             <Header />
-            <h1 className={styles.heading}>Home</h1>
-            <Main />
+            <Main>
+                <h1 className={styles.heading}>Bookmarks</h1>
+                
+            </Main>
         </Layout>
     );
 }
