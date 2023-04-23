@@ -8,10 +8,10 @@ type MenuItemProps = {
 
 export function MenuItem({ name, prop, handleClick }: MenuItemProps) {
     return (
-        <div className={styles.menuItemContainer} role='menuitem' tabIndex={-1}>
+        <div id='menu-items' className={styles.menuItemContainer} role='menuitem' tabIndex={-1}>
             <button
                 className={styles.menuItemButton}
-                onClick={() => handleClick(name, prop)}
+                onClick={(event) => handleClick(event, name, prop)}
                 data-prop={prop}
             >
                 {name}
