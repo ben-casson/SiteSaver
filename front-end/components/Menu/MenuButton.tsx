@@ -11,7 +11,7 @@ type Props = {
 export function MenuButton({ label, menuIsOpen, toggleMenu, selectedOption }: Props) {
     return (
         <div className={styles.menuButtonContainer}>
-            <label htmlFor='menuButton'>{label}</label>
+            {/* <label htmlFor='menuButton'>{label}</label> */}
             <button
                 name='menuButton'
                 id='menuButton'
