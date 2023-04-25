@@ -21,8 +21,8 @@
     --color-gray-10: #22272e;
     --color-gray-11: #1b2026;
     // F8FBFF, f5f8fc
-    --color-gray-12: #f0f6fd;
-    --color-gray-13: #e3ecf9;
+    --color-gray-12: #e3ecf9; // f0f6fd
+    --color-gray-13: #d8e4f5;
 
     --color-green-1: #e6fceb;
     --color-green-2: #8fe994;
@@ -36,34 +36,48 @@
     --color-white: #fff;
 
     --radius-1: 0.6em;
-    --radius-2: 0.35em;
+    --radius-2: 0.3em;
     --radius-3: 0.2em;
 }
 
 @mixin light-mode {
-    --button-bg: var(--color-gray-12);
+
+    --bookmark-text: var(--color-blue-3);
+    // --button-bg: var(--color-gray-12);
+    --button-bg: var(--color-white);
     // #effaff
-    --button-hover-bg: var(--color-gray-13);
+    --button-hover-bg: var(--color-white);
     --hamburger-button: var(--color-gray-4);
     --header-bg: var(--color-white);
     --header-shadow: 0em 0.1em 0.5em 0em var(--color-gray-3);
+    --input-border: 1px solid var(--color-gray-2);
+    --input-border-focus: 2px solid var(--color-gray-2);
+    --input-border-hover: 1px solid var(--color-gray-2);
+    --section-border: 2px solid var(--color-gray-1);
     --shadow: 0px 2px 4px 0px var(--color-gray-3);
+    --shadow-inset: inset 0px 1px 4px 0px var(--color-gray-3);
     --site-bg: var(--color-white);
     --tag-active: var(--color-white);
     --tag-inactive: var(--color-green-1);
     --tag-text: var(--color-green-3);
     --text-primary: var(--color-gray-6);
-    --text-hover: var(--color-gray-6);
+    --text-hover: var(--color-gray-7);
     --text-logo: var(--color-blue-2);
     background-color: var(--site-bg);
 }
 @mixin dark-mode {
+    --bookmark-text: var(--color-blue-2);
     --button-bg: var(--color-gray-11);
     --button-hover-bg: var(--color-gray-9);
     --hamburger-button: var(--color-gray-5);
     --header-bg: var(--color-black);
     --header-shadow: 0em -0.1em 0.1em 0.1em var(--color-gray-11);
+    --input-border: 1px solid var(--color-gray-9);
+    --input-border-focus: 2px solid var(--color-gray-8);
+    --input-border-hover: 1px solid var(--color-gray-8);
+    --section-border: 2px solid var(--color-gray-11);
     --shadow: none;
+    --shadow-inset: inset var(--shadow);
     --site-bg: var(--color-black);
     --tag-active: var(--color-green-2);
     --tag-inactive: var(--color-green-6);
@@ -75,12 +89,18 @@
 }
 
 @mixin flat-dark-mode {
+    --bookmark-text: var(--color-blue-3);
     --button-bg: var(--color-gray-9);
     --button-hover-bg: var(--color-gray-8);
+    --input-border: 1px solid var(--color-gray-8);
+    --input-border-focus: 2px solid var(--color-gray-8);
+    --input-border-hover: 1px solid var(--color-gray-8);
     --hamburger-button: var(--color-gray-5);
     --header-bg: var(--color-gray-9);
     --header-shadow: 0em 0.1em 0.3em 0em var(--color-gray-11);
+    --section-border: 2px solid var(--color-gray-9);
     --shadow: 0em 0.1em 0.3em 0em var(--color-gray-11);
+    --shadow-inset: inset var(--shadow);
     --site-bg: var(--color-gray-10);
     --tag-active: var(--color-green-4);
     --tag-inactive: var(--color-green-5);
