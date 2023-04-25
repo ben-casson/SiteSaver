@@ -6,7 +6,11 @@ import useThemeStore from '@/lib/themeStore';
 import NavMenuItem from './NavMenuItem';
 import MobileNavMenu from './MobileNavMenu';
 
-export default function Header() {
+type Props = {
+    heading: string;
+}
+
+export default function Header({ heading }: Props) {
     const theme = useThemeStore((state) => state.theme);
 
     return (
@@ -26,8 +30,9 @@ export default function Header() {
                     </div>
                     <p className={styles.logoText}>iteSaver</p>
                 </div>
+                <h1 className={styles.heading}>{heading}</h1>
                 <ul className={styles.navMenuItems}>
-                    <NavMenuItem text='Bookmarks' path='/' />
+                    <NavMenuItem text='Home' path='/' />
                     <NavMenuItem text='Settings' path='/settings' />
                 </ul>
                 <MobileNavMenu />
