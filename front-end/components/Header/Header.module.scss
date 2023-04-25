@@ -1,6 +1,7 @@
 .header {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 54px;
     width: 100dvw;
     background-color: var(--header-bg);
@@ -28,7 +29,7 @@
                     font-weight: bold;
                     z-index: 2;
                 }
-    
+
                 .icon {
                     position: absolute;
                     top: -12px;
@@ -46,10 +47,31 @@
             }
         }
 
+        @media (max-width: 1000px) {
+            .logoContainer {
+                display: none;
+            }
+        }
+
+        .heading {
+            color: var(--text-primary);
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 4px;
+            margin-left: 3px;
+        }
+        @media (min-width: 1001px) {
+            .heading {
+                display: none;
+            }
+        }
+
         .navMenuItems {
             display: flex;
+            align-items: center;
+            margin-right: 10px;
         }
-        @media (max-width: 800px) {
+        @media (max-width: 1000px) {
             .navMenuItems {
                 display: none;
             }
@@ -57,3 +79,9 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .header {
+        height: 50px;
+        box-shadow: none;
+    }
+}
