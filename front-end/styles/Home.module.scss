@@ -1,3 +1,89 @@
-.heading {
-    color: var(--text-primary);
+.container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+
+    .bookmarksSection {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex-grow: 1;
+        min-width: 320px;
+        // border: 2px solid var(--bookmark-text);
+
+        .heading {
+            color: var(--text-primary);
+            font-weight: 400;
+            font-size: 22px;
+        }
+        @media (max-width: 1000px) {
+            .heading {
+                display: none;
+            }
+        }
+
+        .inputsContainer {
+            display: flex;
+            gap: 8px;
+            flex-grow: 1;
+            padding-bottom: 8px;
+            border-bottom: var(--section-border);
+
+            .infoIcon {
+                display: block;
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+                font-style: italic;
+                text-align: center;
+                margin-top: -8px;
+                color: var(--text-primary);
+            }
+
+            .bookmarkSearch {
+                flex-grow: 1;
+                height: 32px;
+                background-color: var(--site-bg);
+                // box-shadow: var(--shadow);
+                border: var(--input-border);
+                border-radius: var(--radius-3);
+                outline: none;
+            }
+            .bookmarkSearch:hover {
+                border: var(--input-border-hover);
+            }
+            .bookmarkSearch:focus {
+                border: var(--input-border-focus);
+                // box-shadow: var(--shadow-inset);
+            }
+
+            .sortDirection {
+                height: 32px;
+                width: 32px;
+                border-radius: var(--radius-2);
+                color: var(--text-primary);
+                background-color: var(--button-bg);
+                text-align: center;
+                font-size: 18px;
+                cursor: pointer;
+                box-shadow: var(--shadow);
+            }
+            .sortDirection:hover {
+                color: var(--text-hover);
+                background-color: var(--button-hover-bg);
+                box-shadow: var(--shadow);
+            }
+        }
+    }
+
+    .tagsContainer {
+        width: 400px;
+        min-width: 300px;
+        // border: 2px solid var(--tag-text);
+    }
+    @media (max-width: 1000px) {
+        .tagsContainer {
+            display: none;
+        }
+    }
 }
