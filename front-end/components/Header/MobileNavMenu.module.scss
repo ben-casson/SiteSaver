@@ -8,10 +8,17 @@
         height: 40px;
         background-color: transparent;
         cursor: pointer;
+        margin-right: -7px;
+        z-index: 4;
 
         svg {
             fill: var(--hamburger-button);
             margin: 0 4px 2px 0;
+        }
+    }
+    .hamburgerMenuButton:hover {
+        svg {
+            fill: var(--text-hover);
         }
     }
 
@@ -21,10 +28,10 @@
         justify-content: center;
         align-items: flex-start;
         background-color: var(--header-bg);
-        height: 100dvh;
+        height: calc(100dvh - 7px);
         width: 100dvw;
         left: calc(-100dvw + 50px);
-        top: 54px;
+        // top: 54px;
         padding-top: 40px;
         z-index: 3;
 
@@ -32,8 +39,8 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            gap: 20px;
+            align-items: flex-start;
+            // gap: 0px;
         }
     }
 
@@ -42,11 +49,11 @@
     }
 
     .closed {
-        animation: fadeout 300ms ease forwards;
+        animation: fadeout 400ms ease forwards;
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1001px) {
     .mobileMenuContainer {
         display: none;
     }
@@ -71,17 +78,39 @@
 
 @keyframes fadeout {
     from {
-        transform: translateX(0);
         opacity: 1;
     }
     to {
-        transform: translateX(100%);
         opacity: 0;
     }
     0% {
-        opacity: 0.6;
     }
-    40% {
+    20% {
+        opacity: 1;
+
+    }
+    30% {
+        transform: translateX(0);
+        
+    }
+    50% {
         opacity: 0;
     }
+    100% {
+        transform: translateX(100%);
+
+    }
 }
+
+// @keyframes fadeout {
+//     20% {
+//         transform: translateX(0);
+//         opacity: 1;
+//     }
+//     50% {
+//         opacity: 0;
+//     }
+//     100% {
+//         transform: translateX(100%);
+//     }
+// }
