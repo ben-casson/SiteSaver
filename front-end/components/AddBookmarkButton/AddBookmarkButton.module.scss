@@ -1,0 +1,9 @@
+.addBookmark {
+    background-color: var(--button-bg);
+}
+
+@media (max-width: 600px) {
+    .addBookmark {
+        display: none;
+    }   
+}
