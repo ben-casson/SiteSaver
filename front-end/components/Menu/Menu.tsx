@@ -4,7 +4,7 @@ import useComponentVisible, { setMenuAttributes } from '@/hooks/useComponentVisi
 
 type Props = {
     children: any;
-    label: string;
+    label?: string | null;
     selectedOption: string;
 };
 
@@ -21,10 +21,9 @@ export function Menu({ children, label, selectedOption }: Props) {
     }
 
     return (
-        <>
             <div id={styles.container} ref={ref}>
                 <MenuButton
-                    label={label}
+                    label={label || ''}
                     toggleMenu={toggleMenu}
                     menuIsOpen={isComponentVisible}
                     selectedOption={selectedOption}
@@ -35,6 +34,5 @@ export function Menu({ children, label, selectedOption }: Props) {
                     </div>
                 )}
             </div>
-        </>
     );
 }
