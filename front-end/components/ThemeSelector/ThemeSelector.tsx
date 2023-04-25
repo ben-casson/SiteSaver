@@ -12,7 +12,7 @@ export default function ThemeSelector() {
     };
 
     return (
-        <Menu selectedOption={theme} label='Theme'>
+        <Menu selectedOption={theme}>
             <MenuItem name='Light' prop='light' handleClick={toggleTheme} />
             <MenuItem name='Dark' prop='dark' handleClick={toggleTheme} />
             <MenuItem name='Flat Dark' prop='flat-dark' handleClick={toggleTheme} />
