@@ -57,18 +57,30 @@ export default function MobileNavMenu() {
                     styles.container + ' ' + (isComponentVisible ? styles.open : styles.closed)
                 }
             >
-                <ul className={styles.menuItems}>
-                    <NavMenuItem
-                        text='Bookmarks'
-                        path='/'
-                        handleClick={() => setIsComponentVisible(false)}
-                    />
-                    <NavMenuItem
-                        text='Settings'
-                        path='/settings'
-                        handleClick={() => setIsComponentVisible(false)}
-                    />
-                </ul>
+                <nav>
+                    <ul className={styles.menuItems}>
+                        <NavMenuItem
+                            text='Home'
+                            path='/'
+                            handleClick={() => setIsComponentVisible(false)}
+                        />
+                        <NavMenuItem
+                            text='Add Bookmark'
+                            path='/addBookmark'
+                            handleClick={() => setIsComponentVisible(false)}
+                        />
+                        <NavMenuItem
+                            text='Tags'
+                            path='/tags'
+                            handleClick={() => setIsComponentVisible(false)}
+                        />
+                        <NavMenuItem
+                            text='Settings'
+                            path='/settings'
+                            handleClick={() => setIsComponentVisible(false)}
+                        />
+                    </ul>
+                </nav>
             </div>
         </div>
     );
