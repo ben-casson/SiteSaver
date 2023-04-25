@@ -1,9 +1,21 @@
 .layout {
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100dvw;
     height: 100dvh;
     padding: 15px 20px;
+}
+
+@media (max-width: 1000px) {
+    .layout {
+        padding: 0px 20px;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 300px) {
+    .layout {
+        position: fixed;
+    }
 }
